@@ -20,6 +20,7 @@ use([
   CanvasRenderer,
 ])
 
+// 文档链接：https://vueuse.org/core/useEventSource/
 const { data: eventSourceData } = useEventSource('https://interview-1217.cinea.cc')
 watch(eventSourceData, (d) => {
   // 在这里处理收到的数据
