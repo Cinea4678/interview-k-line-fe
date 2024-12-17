@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 
 import path from 'node:path'
+import { PrimeVueResolver } from '@primevue/auto-import-resolver'
 import Vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -48,12 +49,18 @@ export default defineConfig({
       dirs: [
         './src/composables',
       ],
+      resolvers: [
+        PrimeVueResolver(),
+      ],
       vueTemplate: true,
     }),
 
     // https://github.com/antfu/vite-plugin-components
     Components({
       dts: true,
+      resolvers: [
+        PrimeVueResolver(),
+      ],
     }),
 
     // https://github.com/antfu/unocss
