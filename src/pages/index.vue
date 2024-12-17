@@ -20,7 +20,7 @@ use([
   CanvasRenderer,
 ])
 
-const { data: eventSourceData } = useEventSource('https://sel-arm.fmeow.com:5203/trade/sse')
+const { data: eventSourceData } = useEventSource('https://interview-1217.cinea.cc')
 watch(eventSourceData, (d) => {
   // 在这里处理收到的数据
   console.log(d)
